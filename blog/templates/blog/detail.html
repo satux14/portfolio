@@ -7,6 +7,8 @@
 
   <h5 class="text-center text-muted mb-5">{{ blog.date|date:'F jS Y' }}</h5>
 
-  <p id="pdesc">{{ blog.description|safe }}</p>
+  <div id="pdesc">
+    {{ blog.description|safe }}
+  </div>
 
 {% endblock %}
