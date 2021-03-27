@@ -8,35 +8,39 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "myportfolio/custom.css" %}">
 
-    <link rel="stylesheet" href="{% static "portfolio/custom.css" %}">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Open+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/png" href="{% static "myportfolio/logo.PNG" %}">
+    <link rel="icon" type="image/png" href="{% static "portfolio/images/logo.PNG" %}">
 
     <title>Sathish Kumar</title>
+
   </head>
-  <body>
+
+  <body id="mybody">
     <nav id="topNav" class="navbar navbar-expand-md navbar-light">
       <div class="container">
         <a class="navbar-brand" href="{% url 'home' %}">
           <img src="{% static "myportfolio/logo.png" %}" width="30" height="30" class="d-inline-block align-top" alt="Sathish's Logo">
-          <span>Sathish Kumar</span>
+          <span class=font-weight-bold>Sathish Kumar R</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse text-center" id="navbarNav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="{% static 'myportfolio/resume.pdf' %}">Resume</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/sathishkumarraju/" target="_blank">LinkedIn</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://www.linkedin.com/in/example/" target="_blank">LinkedIn</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://twitter.com/example" target="_blank">Twitter</a>
+              <a class="nav-link" href="https://twitter.com/" target="_blank">Twitter</a>
             </li>
             <li>
               <a role="button" href="{% url 'blog:all_blogs' %}" class="btn btn-primary">Blog</a>
