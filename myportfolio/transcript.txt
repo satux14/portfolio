@@ -1,0 +1,1701 @@
+Python Anywhere:
+All right so you've created your own personal portfolio but no one else can see it.
+
+We've got to get this thing on the Internet live so that other people can see it.
+
+So essentially in order to do that you have to have your code running somewhere.
+
+You know you know whenever we go into the terminal we do run server essentially that has to happen on
+
+some computer somewhere.
+
+So there are ways that you could try and make it go on your own computer and have it run 24/7.
+
+But there's so many issues that come up about whether your ISP the people that provide you internet
+
+will allow you to take incoming traffic for a Web site and you'd have to make sure that your computer
+
+is up 24/7 if you want your site to be up 24/7 and there's just all sorts of issues.
+
+So that's not a good option.
+
+Now you can go ahead and host it on some other computer a.k.a. a server somewhere like something like
+
+a W.S. digital ocean.
+
+And those are great but they require a lot of work.
+
+You have to know the operating systems very well and things change all the time and it can be a little
+
+bit of work to make sure that it's always up and running like you'd like it.
+
+Now there's other services that handle a lot of this for you like Heroku is a great example of you just
+
+take your project and you essentially send your comments that you haven't get hub over to Heroku and
+
+then they deploy the whole thing for you make sure it's set up all that stuff today.
+
+I'm going to be showing you something that's a little bit in the middle ground it's called Python anywhere.
+
+And while it's much simpler than having your own server it's a little bit more hands on than doing something
+
+like Heroku.
+
+So for this I have a link for you if you'd like to use it.
+
+It's zapping code dot com slash P A for Python anywhere.
+
+So go ahead and go there.
+
+That will take you to the Python anywhere Web site and that will attach an affiliate link for me that
+
+basically says if you use some of their services I'm going to get a cut now.
+
+I'd like it if you use my link but it's not necessary by any means if you just want to go ahead and
+
+go to the Web site.
+
+Python anywhere dot.com.
+
+It's no issue in fact why I pick this service and what's so great about this is you can have a site
+
+on here that is completely free.
+
+You don't have to pay any money in my previous course I had use digital ocean but you had to pay money
+
+after two months with this python anywhere you can run at the Free Level small Web sites forever it's
+
+really great.
+
+So with that go ahead and on the Web site let's go ahead and sign up K and go ahead and create a account.
+
+We're going to just do the beginner level that's where all the free stuff is.
+
+And go ahead and fill this out.
+
+So once you're done with that they're going to have a tour for you but you can go ahead and x out of
+
+that one thing I would recommend is go ahead and confirm your email address.
+
+They'll just send you an e-mail.
+
+Click on the link that they send you.
+
+Now that we've gone ahead and signed up for Python anywhere confirmed our email address.
+
+We need to upload our code here so that they can run it.
+
+Remember your Web site being hosted deployed just means that your code is running somewhere.
+
+And in this case it's going to run on Python anywheres servers.
+
+So a great and really easy way to do this is to use get.
+
+Right.
+
+We learned how to upload a project to get hub before.
+
+Let's go ahead and take our current project and add it to get hub so that we can bring it into Python
+
+anywhere.
+
+So first let's go ahead and move over to get hub and let's start a new project.
+
+So I'm going to do new repository to call this Django three portfolio dash
+
+personal portfolio.
+
+I'm going to keep the names similar.
+
+Here's a personal port folio how to spell that correctly.
+
+Portfolio looks good.
+
+Okay.
+
+So I'm gonna make this public feel free to choose your own name you can do the exact same one as me
+
+or you can do something else.
+
+Go ahead and create that repository Kay once you've done that we're gonna have to do the same thing
+
+that we did before which is add the get hub address as a origin a place that we can push our code to.
+
+So I'm gonna go ahead and open up our terminal our your servers running so going to do a control C and
+
+I'm going to make sure I'm in this base that has you know the managed pi you should be there if you're
+
+running your server but if not make sure you get to that directory and once you're there go ahead and
+
+do a get status we should see that get has not been initiated yet.
+
+Or maybe you did it on your own.
+
+That's totally fine but I'm now going to do a get in it which starts up yet and then I'm just going
+
+to add everything that we have and move it up to the server here so I'm going to do a get add dash capital
+
+a and then I'm going to do a get commit dash M and I'll go ahead and oh I have to put in a commit message
+
+here so I'm just going to say first commit summation pointing and add that space at the end.
+
+So the exclamation point works great now that we have that there I'm going to copy this line of code
+
+that's going to add that origin.
+
+So go ahead and paste that here enter and then I'm also gonna say get push to master so I'm going to
+
+go ahead and copy this.
+
+Hit enter on this is and this is going to move the code from our local computer up to get hub.
+
+Now if this was successful we should see that if we reload this get hub page now it's going to show
+
+the code that's inside of there.
+
+Pretty awesome huh.
+
+Okay.
+
+Now that we have this what we then need to do is take this code and pull it down from get hub into Python
+
+anywhere.
+
+So we're gonna move over to Python anywhere.
+
+We're gonna go to bash which basically this is their terminal.
+
+This is their way to access and work with their system.
+
+Now this is a Linux system meaning that the commands that I type you have to do the exact same so up
+
+to this point.
+
+If you ban on a Windows computer and you know you've been using dir instead of LSI you've got to do
+
+the exact same commands as me because regardless of whatever computer using Mac Windows Linux whatever
+
+this little web browser here this is controlling a Linux server on the Python anywhere Web site.
+
+So you've got to follow the same commands as me.
+
+So once we're here if we do an L S we're inside of our home directory here on the server we want to
+
+bring our code into this space.
+
+And if you want to see more where you are if you do p WD that shows you the exact spot that you're at.
+
+So in my case my user name was Nick Walter slime at slash home slash Nick Walter.
+
+All right.
+
+So what I'm gonna do is I'm gonna move back to get hub and I'm gonna click on this clone or download
+
+and copy the U.R.L. that we have here.
+
+So if you just hit this button I will copy it for you.
+
+I'm going to come back and say Get clone and then paste that in and hit enter.
+
+And what's this doing is it's taking all the code from our kit hub repository and putting it here locally
+
+and if you do an L S which displays the files you can see there's a new directory here called Django
+
+three dash personal dash portfolio.
+
+Now the one thing that's a little bit different here right.
+
+This is a different name than what we had for our top level folder.
+
+Now you can change that if you want but it's not going to affect the functionality of the site is all
+
+at all so I figure just keep it as this but if we do like a C.D. into this Django three personal portfolio
+
+and do an Alice you can see here is all of our stuff that we're familiar with.
+
+Oh there's the Eskew lite three the media portfolio.
+
+It's all looking good.
+
+OK.
+
+So this is probably a good place to break here.
+
+We've gotten our code from our local computer put it up on github and now have taken it down into Python
+
+anywhere.
+
+Let's keep moving.
+
+Virtual Environment:
+Now next we're going to use what's called a virtual environment.
+
+Now you may have heard this term before especially if you've looked up any sort of Django tutorial or
+
+plots of Python tutorials for that matter.
+
+But a virtual environment allows you to sort of create a space for different projects that may have
+
+different requirements.
+
+So for example in a given virtual environment you can specify the version of Python that you want to
+
+use and you can specify all the different packages you want from pip installed there.
+
+So you know you may have one project that takes 50 packages and one that only uses 10 and you want to
+
+separate those because they may be using different versions of different packages and again different
+
+versions of python on each.
+
+There's all sorts of different reasons but it's a good practice to be using a virtual environment as
+
+we create projects.
+
+And in fact in our next Web site we're going to be creating a virtual environment on our local computer.
+
+But first I want you to see how it is here on the Python anywhere terminal.
+
+So first thing that we're going to do is we're just going to type in M.K. which is short for make and
+
+then virtual EMV.
+
+So this is making a virtual environment.
+
+We're gonna do dash dash lowercase python and set this equal to and this is where we're saying which
+
+version we want to use and we're gonna do slash user U.S. R slash bin slash and if you hit tab you should
+
+be getting autocomplete here for example like if I start typing python.
+
+OK.
+
+Maybe it doesn't work on this Web site.
+
+I'm getting dings but we're gonna be using three point eight.
+
+So dash dash Python equals slash user slash Ben slash Python three point eight.
+
+So you can choose the version that you want like if you want to use 7 6 whatever you can but I think
+
+8 is a good one it's the current one as of now and I'm then gonna give a name to that virtual environment
+
+that we're creating.
+
+So I'm going to call this port folio BMV.
+
+So for me this helps me remember both the project that I'm working on and that it's a virtual environment
+
+so that's why I call it portfolio BMV.
+
+There's nothing magical about that you could pick totally whatever name that you want but go ahead hit
+
+enter on this and this will take a little bit of time to get this set up.
+
+But once this is here it's going to activate this virtual environment and then inside of this virtual
+
+environment we will always be using Python three point eight in any packages that we install are always
+
+going to be there.
+
+So it's nice to kind of have that to rely on.
+
+So we'll go get go ahead and give Python anywhere some time.
+
+So once that's finished we should see that we now have here in our terminal.
+
+This name of our virtual environment in parentheses and that shows us that we're activated inside the
+
+virtual environment.
+
+So what does this mean.
+
+Basically inside the virtual environment anything that we install in Pip is contained inside of that
+
+virtual environment.
+
+And we'll always be using the specific version of Python that we mentioned.
+
+So for example if I type out python and hit enter.
+
+You'll notice that it's three point eight.
+
+I didn't have to type Python 3 or anything like that.
+
+I'm going to type exit with an open and close parentheses to get out of the Python terminal.
+
+And if we ever want to get out of our virtual environment all we have to do is say exit.
+
+And that gets us out of the console.
+
+Well okay let's go ahead and move back into it.
+
+So go to your dashboard and hit bash OK and it won't automatically bring you into your virtual environment
+
+in order for you to do that you have to say work on and then give the name of your virtual environment.
+
+So in my case that's going to be port folio the EMV if you use the same name as me it's going to be
+
+the same for you.
+
+And if you notice we do that we get the portfolio the EMV in parentheses that's how we get back into
+
+it.
+
+So the way that we get out of this I misspoke the Activate instead of exit D ACH fait
+
+and look at that.
+
+Now we're outside of the virtual environment if we want to get back into it.
+
+We just go ahead and do the work on space and then the name of our virtual environment.
+
+Now if you forgot your name you can see any virtual environment that you've created by doing CDE dot
+
+virtual EMV V.S. if you do tab it will autocomplete for you and then do an L s..
+
+This shows you the different virtual environments that are here inside of this folder so you can see
+
+there's a couple of different ones here.
+
+But the one that we created the one that really matters to us is this portfolio BMV.
+
+These are other ones that I assume Python anywhere has created.
+
+So just know anytime you come into bash make sure that you get into that virtual environment by doing
+
+the work on thing.
+
+You can either completely quit out of this and come back to get out of it or just do the deactivate
+
+and then you can come right here.
+
+Okay.
+
+So now that we have our own virtual environment really the only things that we need to make sure that
+
+we have in here are Django and also pillow.
+
+So let's go ahead and do a pip install Django and also pillow.
+
+Those are gonna be the two things that we want installed.
+
+So we'll go ahead and let it do its thing.
+
+Then eventually you will get to the point where it's all installed and at this point we're ready to
+
+move forward and actually get our site live next lecture is going to be big.
+
+Running the server:
+Now as we move forward in deploying our project there's three key pieces of information that we need
+
+to have.
+
+So the first one is the path to our projects.
+
+So right now I moved into that virtual environment directory so I need to do a C.D. dot dot that's going
+
+to move me back one or if you just go to your home directory.
+
+You can do C.D. to the squiggly and if you just do an L S we're going to move into our project which
+
+for me is the Django three personal portfolio and I'm going to type P.W. WD In hit enter.
+
+And this shows me the complete path to where my project is so that I know exactly OK.
+
+This is how I can get to it.
+
+That's the first piece of information that we need to know.
+
+The next one is the name of our project which in my case is personal portfolio.
+
+Now if there's any question on this if you do and unless it's the name of the folder that contains your
+
+settings and if you go into settings you can see that the name is referenced in multiple places throughout
+
+here but it's this exact name that you shouldn't be changing here.
+
+But it's the name that you gave at the very beginning you got to know what the name of your project
+
+is and then the last thing is you just need to know the name of your virtual environment.
+
+So that should be the thing that's here in the parentheses.
+
+In my case part portfolio BMV it's whatever you set it.
+
+But if we have those three pieces of information we can move forward.
+
+So in a new tab we're gonna open up Python anywhere so go ahead and open up a new tab and Open up Python
+
+anywhere.
+
+And what we're gonna do here is move over to web and actually create on Python anywheres back end that
+
+we want to make a web site and they're gonna help do all the work to get what code we just uploaded
+
+working here to be deployed.
+
+So we're gonna click add a new web app.
+
+All right.
+
+And it's telling you hey since you're on the free plan that the name of your Web site is going to be
+
+in my case on site chosen name Nick Walter Nick Walter Python anywhere dot com.
+
+Now you can pay to have a paid account and have you own custom domain domain.
+
+I'm going to show you how to do that at the end of the section but just a little bit of info there.
+
+OK.
+
+So next it's going to say you know these are the different things that you can choose from.
+
+And it's very tempting to go choose Django here because it just has a lot of things set up for you.
+
+But we actually want to do the manual configuration because this allows us to have little custom bits
+
+and pieces here and it's really not that hard.
+
+I'd really like Python anywhere they make things really simple.
+
+Even when you're doing manual configuration like this I'll go ahead and select that it's going to say
+
+what version of Python are you using here we specified three point eight.
+
+So let's go ahead and pick three point eight.
+
+Let's go ahead and choose.
+
+Next here is just got tips on basically what it is we're about to do.
+
+All right.
+
+That then brings you to this page which is sort of your dashboard for your Web site.
+
+And so anytime we make changes we're going to hit this reload button This is something you'll come to
+
+see we do all the time.
+
+Also there's this notice here so this is free as long as you log in once every three months.
+
+And it's not like afterwards that you know you're blocked out of your accounts just like you have to
+
+come back and get stuff set up anyways.
+
+It's kind of a cool thing it's just like hey make sure you're using our service and we'll be sure to
+
+keep up your Web site.
+
+But if we go ahead and move down here there's a couple of things that we've got to make sure that we
+
+enter here.
+
+So the first one is let's go ahead and set in the path to our virtual environment so click this enter
+
+path.
+
+And for this we're just going to simply put the name of our virtual environment.
+
+So in our case remember that was if we go to the council here what was in parentheses portfolio v EMV
+
+in fact I'm just going to copy that directly.
+
+So I'm going to take that and paste that in into that.
+
+OK.
+
+So here you can see it does the full path for us to where it is awesome.
+
+The next step for us is we want to change where our source code and working directory is.
+
+So this is basically saying hey where is your code.
+
+So if we go ahead and click on this this is where we want to copy the full path of what we had listed
+
+before.
+
+So if you do that P WD and it shows it's going to be basically slash home slash whatever name you picked.
+
+And then the name of your folder for your projects mean we go ahead and just paste that there enter
+
+it.
+
+And I'm also going to change the working directory to also be that we'll go ahead and paste this in
+
+enter.
+
+Beautiful.
+
+OK.
+
+So now that we've done that we need to alter this whiskey file.
+
+Now this is not our projects whiskey file.
+
+In fact if we go back to our project and we do a C.D. into personal portfolio today
+
+come on here this is being slow for me
+
+we go.
+
+OK.
+
+I went somewhere crazy.
+
+Let's do an L S Ok.
+
+You can see we have the settings dot pi and also on whiz get up high.
+
+But this is not the whiskey file that we're editing.
+
+This is in fact actually one that Python anywhere has that will eventually point to our project and
+
+all that good stuff.
+
+So we want to click here to be able to edit that.
+
+Now when we do this this whiskey file has a ton of different things in here.
+
+In fact right now it's set up to show this h t mail so if you actually go in type in like in my case
+
+my Web site was Nick Walter.
+
+Dot Python anywhere dot com.
+
+I believe K. It's showing the code that was written right here so we could actually manually enter this
+
+and change what's showing up there but we want it to show our Django project.
+
+So what we want to do is scroll down until we see the code that comes for Django right here.
+
+OK.
+
+And we want to use all of this code.
+
+So what we're going to do is like all the flasks stuff down below.
+
+We're going to delete that.
+
+We're going to go up above all the stuff that says custom whiskey virtual environment we're going to
+
+delete that all this stuff that shows the Web site that's there now.
+
+We're gonna go ahead and delete that.
+
+Only having the Django stuff.
+
+So we're going to select all of this.
+
+If you hit command and then the slash on Windows it might be the control slash.
+
+But anyways it will uncommon comment that if if you can't get that to work you just have to delete all
+
+the different comments there.
+
+But with this in place we want to make sure that we delete this bit up here the plus plus Django to
+
+use your own Django blah blah blah like your code should start with the import os in the import system
+
+k so next what we have to do here is set everything to be able to setup for our product.
+
+So the first one is we have to set the path so this path should be wherever it is that our project is.
+
+So we're going to go back to bash here and we're going to copy what P.W. D gave us online.
+
+Go ahead and copy this come back to the project here.
+
+OK.
+
+So I'm going to then paste that in.
+
+Excellent.
+
+And the next thing here is we have to set where it says my site settings.
+
+This is the name of your project.
+
+So in my case it's personal underscore portfolio for you it might be different if you chose a different
+
+name.
+
+Again the way to find this it's the name of the folder that has your settings.
+
+So if I'm inside of my main project mine is personal portfolio.
+
+Yours might be different but make sure you have that exact name.
+
+So in my case personal underscore portfolio dot settings.
+
+OK.
+
+So with that in place that's all the changes that we need to make.
+
+So we're gonna go ahead and hit save their all right.
+
+Wait for that to finish then we're gonna go back.
+
+Click on the little Python guy there and then go to Web.
+
+This is where we're going to reload our Web site so we'll wait for that to finish.
+
+So once that's finished let's go ahead and move over to that tab where we were checking out the Web
+
+site that was there before.
+
+If we go ahead and hit enter on this you can see we're not completely there yet but we're one step closer
+
+we can tell that our Python are Django code is running here because we're getting the Django error page.
+
+Now the error that we're getting here is that whenever we push to deployment we have to specify what
+
+you are L this thing is going to be running out.
+
+So in this case mine is Nick Walter Python anywhere income or as yours is going to be something different.
+
+So you have to make sure that you find the name of your Web site.
+
+But in this case I'm going to copy this and then I'm going to move back into my project.
+
+In fact we could you know edit things here through the terminal or this is kind of cool that we can
+
+go say hey take me to my source code click on go to directory here
+
+canning Python any anywhere loves to take its time when we're going between things other than that it's
+
+really smooth but I will say it takes long to get stuff that we're going to move in to personal portfolio
+
+or whatever the name of your project is so that we can get to the settings.
+
+So here it's kind of nice to just edit things right here instead of in the terminal inside of allowed
+
+host.
+
+This is just a list I'm going to put in some quotes for a string and I'm going to paste in Nick Walter's
+
+Python anywhere and dot com and I'm going to save this.
+
+Now once I have saved this file I'm going to come back to the Web and I'm going to reload and what this
+
+will do is it will take the changes that we've made anytime that you reload it just sort of refreshes
+
+everything.
+
+So since we made a change to settings we have to reload everything.
+
+And it should be.
+
+Now when we reload that home page it's going to actually be showing our Web site you'll notice it's
+
+not perfect like the static files are going to be missing and all that stuff.
+
+But now that that's done I'm going to reload this web page and look at that.
+
+Most this stuff is up and running.
+
+Clearly the static things not there but this is pretty cool.
+
+Like if we go to the blog or blog posts are showing up there we can go back to the home page.
+
+That stuff's all fine.
+
+So pretty awesome.
+
+That with just a little bit of work here we have our project up and running.
+
+If you were to do this on your own manually like you know setting up your own server and installing
+
+a server to run you know the Django app and then you were the set up your own database and all this
+
+stuff like it would take a lot of work.
+
+This is amazing how quick this is up and running but we've got some work to do because not everything
+
+shown.
+
+Static and Media Files:
+So great that we got part of our side up but we have some issues.
+
+One is that we're missing static.
+
+The other one is that for example let's say I go to the name on my Web site slash eggs which we have
+
+no U.R.L. path for eggs if I hit enter I get some bad news here.
+
+I get this forum for not found Paige and this is not something that we would want on our actual Web
+
+site because this kind of shows some of the code behind our project like if someone were to do this
+
+they could see all the different paths that we have.
+
+And then also if there's any type of error it's going to show all the details of their and actual lines
+
+of our code like imagine our code at some point is going to connect with some service like maybe an
+
+e mailing service and there we have to have some API keys and you know we display some sort of error
+
+and when something goes wrong and a user could maybe find the api keys that we use for that email service
+
+and then go out and use it or whatever.
+
+Like this is not a good situation and the reason that all these detailed errors are showing up the really
+
+good when we're making our Web site but not good when we're in production is because we have an option
+
+on our settings set to debug so we need to go and fix that.
+
+So let's go ahead and move back to the web dashboard here.
+
+I'm going to add a new tab open up the directory.
+
+This can be our tab where we basically just work on the site.
+
+So I we go to personal portfolio and I'm going to move into settings.
+
+And here this debug equals true.
+
+I'm going to change this to now say debug equals false and I'm going to save that.
+
+OK.
+
+So now that we have that up and running OK I'm going to save this and then let's go back and reload
+
+this on to show you that this web this error page is going to be a whole lot better.
+
+So now when it does this this is not found.
+
+This is not the prettiest thing in the world we can actually go and create our own custom for all four
+
+not found page.
+
+But for the time being this is better than showing all of our details so we've got that under control.
+
+Now the next thing that we need to do is we need to work on being able to show our static files and
+
+the first thing that we have to do is go back to our settings.
+
+We're going to scroll all the way down to the bottom here.
+
+And you know when the media route we had specified this is where we want to store all of our media files
+
+we have to do the same thing for static.
+
+So when you're deploying your project live you may have static folders in each of your different apps
+
+like there might be one inside of the blog and there might be one inside of the portfolio but you need
+
+to have a way to take all of those and put them in one central location so that you can serve those
+
+all from one place.
+
+And we have to specify where we want that to be.
+
+Now I like to keep things really simple.
+
+I'm just going to copy the same line for media root and I'm going to paste it right below static U.R.L..
+
+Change it to be all caps static underscored root.
+
+And I'm also going to change this text here to say lowercase static so I'm just saying hey let's make
+
+a folder in the base directory called static that will go ahead and show all of this.
+
+So once I've specified the static route I'm going to go ahead and save this file.
+
+All right.
+
+The next thing that I need to do is I'm going to move over to the bash console here and I'm going to
+
+do an L S make sure that I'm in the correct place with the managed up pie and I'm gonna type out Python
+
+managed up pie and then all one word collect.
+
+Static OK and what this does is it takes all the different static files and folders and puts them in
+
+all one central location which you can see here as it moved everything to the name of our project slash
+
+static.
+
+And the reason it put it in that spot is because we just specified here that that's where we wanted
+
+it to go.
+
+Like if I had changed this to say eggs I love you since the example of eggs.
+
+This would have all put it in a folder called eggs.
+
+OK.
+
+So that's what that's about.
+
+And if you want to go see what this looks like.
+
+Let's see if we can go ahead and go back.
+
+So I'm going to go to the personal portfolio and look at this we now have a folder called static and
+
+look there's the stuff from our portfolio inside of here but also admin.
+
+They have their own static files that they're working with and those are showing up.
+
+So just moving that folder there is not enough for us though because you know we have that there but
+
+we need to now go specify and show our site where it is that we can find those like with Python anywhere.
+
+We have to specify that we want to display those so the reason for this is that the python or the Django
+
+project doesn't want you to necessarily be serving your own static files.
+
+The real ideal situation is that you have them on some service like a W.S. or a I think digital ocean
+
+also has their own version of file storage but basically a place that can handle serving files all the
+
+all the time.
+
+The problem is if you usually have them on the same server sometimes that can really slow down things
+
+that people are trying to get lots of files especially if you're hosting like a podcast or some videos
+
+that have really big files.
+
+But anyways those are concerns to worry about once your Web site gets really big and you notice slowdown
+
+most of the time that's not going to be an issue in Python any it will actually handle serving these
+
+in the correct way.
+
+So what we need to do is scroll down here to where we get to static files and we need to specify where
+
+we're going to show these static files so here under U.R.L. we're gonna go ahead and put slash static
+
+slash.
+
+So this is saying anytime someone on our Web site goes to slash static slash where should we send them.
+
+And then the answer is we're going to enter a path here that they should be going to where a static
+
+files are now in order to find that.
+
+Let's go ahead and go back to our project here.
+
+I'm going to do an L S and I'm going to C.D. into static K and then I'm going to do that P WD this will
+
+give us the full path here so I'm going to copy this come back to the project paste this in case and
+
+now anytime someone goes to our Web site slash static it'll load the files from here.
+
+OK so once that's in place I'm going to go ahead and reload this case.
+
+So what should happen is now we should be able to see all our different pieces there are some going
+
+to go ahead and go back to the home page and look at that.
+
+We have all of our static files up here showing.
+
+Isn't that excellent.
+
+So cool.
+
+OK now everything looks awesome but it's actually not that great because if we go ahead and do a full
+
+reload like if you do a command shift are which on Chrome is like the you know really reload like re
+
+download all the files you'll notice that now the media files aren't working the only reason they were
+
+showing up for a second before was that they were in the cache.
+
+So when you're in debug equals true it'll automatically show your media files for you.
+
+And I think technically it can do your static if you're running it locally but anyways our media is
+
+not working now but the fix for this is super simple.
+
+If you notice if we go back to our project and I guess I could even show you here.
+
+Right.
+
+Like inside of our project we have the media folder just like we have a static folder and so we just
+
+have to specify that here so we're gonna scroll down enter in another year or else so this is going
+
+to be slash media Slash.
+
+And then as far as the path goes I'm going to copy what we had up here and paste that in and change
+
+it just from static to media.
+
+OK.
+
+So with that in place again we're going to do the reload here to sort of refresh everything.
+
+And now if we reload our homepage both the static and the media files are showing up for us.
+
+So there's a couple of details here that I want to talk about the first one is that you'll notice our
+
+site here.
+
+It tells us up at the top that this is not secure.
+
+That basically means that this is an H TTP site not h TTP.
+
+Yes.
+
+The thing is we can do this if we specify H TTP s call and slash slash Python anywhere does all the
+
+magic of serving up that for you with HDD peace which is pretty awesome if you want to.
+
+You can go to web and if we scroll down we can specify to force HDD P.S. which means if someone goes
+
+to your website and doesn't specify that they just want the regular or the S it will do that for them
+
+so I recommend this.
+
+So let's go ahead and switch this on and reload here.
+
+So now next time I go to Nick Walter Python anywhere it will reload to always go to h TTP is kind of
+
+a cool thing there.
+
+The next thing is and this is where things are really going to come into play here is if I do my slash
+
+admin because saying I might say oh I want to go add a new blog post I can log in here.
+
+But the thing you have to realize is this is live on the Internet.
+
+Anybody that goes to your projects slash admin and knows your username and password or can yes it can
+
+change everything inside your database.
+
+They can go to your blogs and say I'm going to select everything and delete them.
+
+Now I'm not going to do that but it just kind of shows you that like once this is live like you've really
+
+got to make sure you have picked a good password.
+
+So again if you need to go and change that password you can do that via the command line.
+
+Just go ahead and google Django change super user password and really it's just code to change it for
+
+any user.
+
+But yeah you need to be aware that that's live for everyone to go see.
+
+Now the next bit is that the database that we are using is just the standard s q a light 3 database
+
+that comes when you open a new project.
+
+Now this is usually only meant for development when you move to production you're supposed to move to
+
+a more robust database something like post grass or my S Q L or Maria D.B. that's new support for that
+
+in Django 3 but that's really only an issue once you have a database that has lots of different items
+
+and you're making lots of queries against it and so you may be wondering like when should I do the switch
+
+in my opinion do the switch when you notice your website starting to slow down or if you have issues
+
+or if you're just really bored and need something to do.
+
+So if you want to do that on Python anywhere go ahead and click on this link here called databases.
+
+Now with the free tier you can create a minus Q El database and essentially what you do is you set a
+
+password for it and it's going to then specify a user name what poor it's running on and then if you
+
+google Django by S Q Well there's going to be all sorts of tutorials showing you how to get it set up
+
+so you can go ahead and do that if you want to do post grass you have to.
+
+That's a paid upgrade so you may be saying what's the difference.
+
+At least from what I've read and understood post crest is a little bit more stable beefy than minus
+
+Q L. but honestly I don't think the difference between these things are gonna make much of a difference
+
+until you get like hundreds and thousands and millions of visitors to your Web site.
+
+Like even I personally think you're my S Q L 3 database is going to be just fine for your Web site like
+
+you should have absolutely zero issues anyways I just wanted you to tell you how you could move this
+
+forward if you wanted to.
+
+OK so really awesome we could go ahead and just stop here with what we have.
+
+I mean our Web site is live on the Internet Internet you can share this link with whoever you'd like.
+
+You can keep adding blog posts but in my opinion there's two more things that I think would really make
+
+it make this great one.
+
+What happens if we want to make some changes not like database changes like add a new blog post or add
+
+a new portfolio project or something like that.
+
+No what if I actually want to like change the text let's hear or are going to do an all new layout in
+
+theming and stuff like that if I have changes to my code.
+
+How do I apply that.
+
+There is.
+
+There's a process that I think makes it a lot easier for you than kind of going through everything that
+
+we just did.
+
+And then the other question is you know this is a nice you or L especially for free.
+
+But what if you want to have it so that people could go to like Nick Walter dot com and see my web site.
+
+Now unfortunately I couldn't get Nick Walter dot.com.
+
+Nick Walter dot info which is like almost OK but you know not as great regardless.
+
+Let's go ahead and talk about that in the next one.
+
+Deploying Changes:
+So one thing that's annoying is because we have all the changes that we made for the live server like
+
+debug eval to false if we go to our terminal and I say you know that I want to say Python 3 managed
+
+up high run server OK to go see what we've got.
+
+And then I go on my computer here let's go to local host a thousand you'll notice I get an issue here
+
+and that's because when I'm in debug mode I would have to specify local host as one of the things here.
+
+And really I want to be in debug mode when I'm on my own experience like now this isn't a great setup
+
+or there's a way that we can change this by having essentially two different settings files.
+
+One is the setting stop by another one is local settings stop pi and that's what we added into our get
+
+ignore and this is a great workflow so that you can have your changes locally and then also lives.
+
+So what I'm gonna do is I'm going to create a new file here inside of personal portfolio.
+
+It's a new file.
+
+I'm going to call this local underscore settings it's important to have this same name just because
+
+that's what we put into our gig ignore.
+
+Technically you could call it whatever you want.
+
+Like my changes or whatever but this really is like the common form that people follow.
+
+So I would do this.
+
+So make this file called Local Settings then we're gonna go back to our settings and down at the very
+
+bottom here we're gonna add some extra code.
+
+So basically what we're gonna do here is we're gonna say hey try and see if we're on if there's a file
+
+here called local settings if there is go ahead and implement the changes from there.
+
+So what we're gonna do is say Try colon and then we're gonna say from local underscore settings import
+
+star.
+
+So that's saying grab everything from the local settings file then we're gonna do an except colon and
+
+then I'm going to you know and we got to be a little more specific here except capital import error.
+
+And if you'd like to I kind of like to say something like print something out in here so that we can
+
+see and say looks like no local file.
+
+You must be on production which production is another name for like your life server so you don't have
+
+to do this but I think this is kind of a nice thing to have there.
+
+OK so I'm going to save this file and then I'm going to add the changes that I want in my local file.
+
+So for example in my when I'm just here on my local computer I want debug to be equal to truth.
+
+I'm going to copy that line go to my local settings and just paste that in and change this to say local
+
+is equal to true.
+
+The other thing is I don't want any of these allowed hosts I'm going to like copy this for example and
+
+I'm going to paste this inside of here so I'm going to you know save that.
+
+So now the local settings has these two things for example and in settings we had this at the very bottom
+
+make sure that that's saved and now if we open up our tournament and let's do like a control C and run
+
+this again.
+
+Oh and look at this we're getting the printout looks like no local file.
+
+So this isn't good.
+
+This is telling us it's not finding that
+
+here.
+
+I forgot to do from DOT local settings that's saying look look in this directory for the local settings.
+
+OK.
+
+So I'm going to save this.
+
+And now if we go back to the terminal let's do a control C run that again.
+
+All right.
+
+There's no message there so it should be pulling in those files.
+
+If I go back to this project in reload No.
+
+So the issue that we're facing here is that saying hey you don't have local host eight thousand in your
+
+allowed House.
+
+And I was thinking Well that was the whole point of the settings.
+
+And if we go back to our project here in my local settings I forgot to make this an empty list.
+
+So I'm going to go ahead and delete that save.
+
+Let's reload the page.
+
+Everything's back to normal.
+
+OK so so awesome that we now have a clean working Web site here locally.
+
+And when we push this up that it's going to have those new changes and look at this if we go back to
+
+our terminal and going to do a control C to stop and I do it get status.
+
+OK.
+
+You can notice that it only houses the changes for the settings that pie.
+
+It doesn't do anything about local settings.
+
+Pretty cool.
+
+All right.
+
+This is now where I'm going to take you through the ultimate flow if you have changes and you're trying
+
+to push them live to your site.
+
+So the first thing that we've got to do is we've got to see if we've added any sort of extra packages
+
+to our project via Pip.
+
+So a way that we can do this is if you actually type out in my case I'm using Pip 3 I'm going to say
+
+Pip 3 freeze and then this little carrot the greater than sign over to a file that I'm going to call
+
+requirements Dot T X T.
+
+OK.
+
+So if we go ahead and do this and go back to our code editor you can see what this file looks like.
+
+You can see basically this just finds anything any PIP package that we're using on our own computer.
+
+And the thought is we're probably going to want to use these on our server like so for example if we
+
+were coding and we needed to add a new item here we would go ahead and run this.
+
+Now odds are most times that you do changes you're not going to need that.
+
+But I always recommend just running this line of code to say OK make sure there's nothing there.
+
+So now if I do it get status.
+
+You'll notice I have these two files so I'm gonna do the get add Dot.
+
+I think that's a cool little tip there that that just like adds everything for us.
+
+I'm going to do a get commit dash.
+
+So you have to commit to your code.
+
+So I'm gonna call this new local settings.
+
+OK.
+
+And to really prove that this is working too I'm actually going to pull back from committing this let's
+
+go ahead and make another change on our Web site that we'll be able to see.
+
+So I'm going to go for example to my maybe my home page here.
+
+So let's go to the portfolio
+
+open up home So let's maybe go ahead and change something here like Nick Walter's trauma unit commander
+
+in chief at Zappos code in lives in downtown Tokyo.
+
+So maybe I'll add like an emoji here.
+
+So let's go ahead and throw in some sort of face.
+
+OK.
+
+Happy face I'm going to save this.
+
+Make sure that this looks good locally OK.
+
+So that looks good.
+
+So now the real test is going to be if I can get this at Nick Walter that Python anywhere because if
+
+I reload this obviously those changes aren't showing up.
+
+So I'm gonna go back to the terminal and do a control see.
+
+So I'm gonna do my get
+
+add dot and then I'm going to do a get commit dash M local settings.
+
+That's kind of like what I changed here.
+
+So now if I do get status there should be nothing here.
+
+So I'm gonna do then a get push origin.
+
+OK.
+
+So this pushes it up to get hub.
+
+All right OK so now that those changes are up on github I'm going to go ahead and move over to my console.
+
+So normally if you opened this up for the first time you'd have to type out work on and then you know
+
+the virtue the in our case portfolio the EMV.
+
+But I'm already inside of there.
+
+So that's fine.
+
+Then once you're in there you're gonna have to move into your directory with your project.
+
+But again I'm already there.
+
+So that's fine.
+
+What I'm gonna do is a get pull origin so I'm going to pull in the new code changes once I've done that.
+
+Remember we have this new file here this requirements Dot T X T.
+
+So I'm going to now type out pip install dash R and then requirements dot t t.
+
+And what this does is it goes in it grabs anything that's new inside of there and installs it.
+
+Now if things are already there that we have specified is totally fine but it's going to go grab those
+
+different pieces and bring them into our project.
+
+So Python anywhere notoriously takes a little bit of time with this.
+
+Let's go ahead and bring it back when this is done.
+
+All right.
+
+Now that that's done you need to make sure in migrate anything maybe you had made some migrations locally
+
+on your own computer.
+
+So we're going to do a python managed dot pi migrate.
+
+OK.
+
+There is nothing for us.
+
+So that's going to be no issue there.
+
+The next is we have to collect any static that has been added so we're just going to run Python managed
+
+up pi collect static.
+
+OK.
+
+And again no changes although I guess this does have a couple going to say yes to overwrite that but
+
+I didn't think we had changes huh.
+
+I wonder where those came from.
+
+But regardless K we've done that now that you've done that we just need to go back to Python anywhere
+
+go to Web do the reload here and now.
+
+So notice this is local host and we have the emoji showing up the live one the old one did not have
+
+it but now if we reload check that out we have the emoji and you notice we don't have any other issues
+
+like this is an in debug mode.
+
+Like if I do slash and some random stuff it does the nicer page than showing all of our code and whatnot.
+
+So that's cool that we now have the local settings and then you know the production settings.
+
+So there you have it.
+
+You know how to upload your project to Python anywhere get everything set up.
+
+And if you have changes you know the workflow to go through in order to do all that.
+
+Really the last thing that I have for you is how to have your own domain for a particular Web site.
+
+Now this is going to cost you one to buy the domain and to the upgrade in Python anywhere it's five
+
+bucks a month to be able to have your own custom domain.
+
+So you've got to decide whether or not you want to do that but if you're interested let's go ahead and
+
+talk about that in the next lecture if not just go ahead and move on to the next section where we're
+
+making a sweet sweet.
+
+Domains:
+All right.
+
+This section is going to teach you how to add a custom you are real to your Web site so that rather
+
+than sending people to Nick Walter Python anywhere dot com you can actually send them to something like
+
+In my case I have the U.R.L. Nick Walter dot info like it's a little bit cleaner.
+
+Like if you're gonna use this portfolio to really share your thoughts on your blog and have it be sort
+
+of a talking point when you're trying to get a job like oh check out my Web site you can see my portfolio
+
+and resumé there like maybe you want something a little bit more professional now in order move forward
+
+this.
+
+There's two paid things that have to happen.
+
+The first is you have to buy a domain from some sort of domain name provider like Google domains.
+
+That's the one that I really love and recommend.
+
+But there's things like Go Daddy and name cheap and then also you have to get a paid account with Python
+
+anywhere in order for them to let you do that you have that's part of their paid package.
+
+So if you're willing to move forward on those two things I'd love to show you how to do that.
+
+So the first one Google domains like I said Is my recommended one.
+
+Also there's Go Daddy a name cheap.
+
+The thing that I just like about Google domains is there's no like upselling or other crap it's just
+
+really clean and it's a bait essentially 12 bucks a month to get a domain.
+
+So if you go ahead and just go to Google domains let's see domains dot google is their official thing.
+
+I forget that they have their own top level thing.
+
+But anyways you can go ahead and sign in here check out your stuff and you know you can search for something
+
+like oh let's say that your name is Brad.
+
+I'm trying to think of a last name.
+
+Let's try.
+
+Brad Walter
+
+let's see if that dot com is available.
+
+Maybe it's not.
+
+But you just got to go through find whatever domain name that you want.
+
+Look Brad Walter dot.com is not there but maybe you're saying oh I want to be Brad Walter dot info D.R..
+
+Dr. Bradley was some great suggestions.
+
+Anyways you got to go get a domain case.
+
+So that step one step two is that with Python anywhere you have to have a paid account.
+
+So go ahead and move over to account and do all the work here to get the hacker level.
+
+That's just the least one that you need in order to move forward and this is so crazy like that you
+
+can run a Web site that gets a hundred thousand hits a day on this Web site and that's typical like
+
+you could probably do more than that anyways and it's like for five bucks a month.
+
+That's amazing.
+
+Right now even for free it's not doing all that bad.
+
+So anyways Go ahead do the switch now and get that all set up.
+
+So if you successfully have done that if you go over to web over by the name so first you should see
+
+some cool graphs.
+
+There's all sorts of cool things that come with a paid account but you should see that there's this
+
+little Edit icon for your Web site.
+
+So if we click on this we can rename your web app.
+
+And so this is where you would enter in your domain name.
+
+So for me personally I have the domain.
+
+Nick Walter dot info so I would move over here and I would change the name of my web app to W WW Dot.
+
+Nick Walter dot info.
+
+OK.
+
+So whatever your domain is.
+
+Make sure you enter it in there.
+
+This is mine.
+
+So go ahead and do rename web app and then once you've done that you'll get a new pop up down here that
+
+says DNS setup.
+
+So now it has this U.R.L. in which you have to get your domain to essentially point to this U.R.L. right
+
+here.
+
+So what we're gonna do is we're going to copy this.
+
+And you'll notice I believe now this no longer works.
+
+Yeah.
+
+See so this once you start doing this you got to go but if you ever want to undo this you can just click
+
+this and like I think you can go back to Nick while the python.
+
+I'd have to double check on that but we're moving forward assuming that you have this.
+
+You would move over to wherever you've got your domain name.
+
+So in my case I'm using Google domains I'm going to click on DNS and then I'm going to scroll to the
+
+bottom here and I'm going to add a C name record.
+
+So regardless of where you have your domain you've got to get to where you can add records and look
+
+for the C name and you're going to add one for W W W and then for the domain name.
+
+Paste in that whatever your thing was yours is going to be different from mine.
+
+But go ahead and hit add their name and what this will do.
+
+And you'll notice this note sometimes it can take up to two days for changes to work.
+
+So in the world of online domains it's not always speedy that you know you've added get a new domain
+
+name add a C name and that everything works and doesn't always work out that quickly.
+
+Like if we come and try and go to for example Nick Walter dot info it doesn't go anywhere.
+
+That doesn't mean that we set up anything wrong in fact I think we did set up everything correct I mean
+
+I forgot the w w w here w w w done Nick Walter dot info and now we're getting nothing here but it just
+
+takes some time.
+
+So maybe come back in an hour or two hours a whole nother day if you've correctly entered in that C
+
+name and the W W W so w w w is the name and then the data is that you are L that you had if you've done
+
+that correctly it should be working although you know it's going to take some time.
+
+So I'm going to come back though and show you one more tip because Python anywhere it forces you to
+
+have a W W W in front of your domain name and you may be thinking Hey I don't you know I don't want
+
+a w w w in front of it how can I handle that like someone should be able to go to Nick Walter dot info
+
+and I'm going to show you how we can fix that in a little bit here but I want to wait for this to start
+
+working so while we're waiting for these changes to happen there's a couple of things that I want to
+
+walk through here so one is if we scroll down our Web site remember we had foreseen HDD P.S. now that
+
+we are using our own domain name we have to get a new HDD P.S. certificate so if you go ahead and click
+
+on this you can just do this auto renewed Let's Encrypt certificate which this is a really awesome project
+
+that essentially lets you get a certificate you can also go out and buy one somewhere.
+
+But I would just do this auto renew thing so go ahead and hit save on that OK.
+
+And I would also make sure that this might have already been on for you but I'd switched it off to turn
+
+it back on now that I have this and once you have this in place let's go ahead and do the reload here.
+
+The next thing is now that we have a new domain name for our project we have to add that to our allowed
+
+hosts.
+
+So this means we have to go through sort of our whole flow of making a change locally and then pushing
+
+it up.
+
+Right.
+
+All those different things.
+
+So let's go back to our project here locally on our own computer.
+
+And up here in the allowed host rather than Nick Walter that Python anywhere.
+
+I'm going to do w w w dot Nick I can't spell my own name.
+
+Nick Walter dot info K and make sure that you have the W W W that's really important.
+
+Okay.
+
+So I'm going to go ahead and save this then I'm gonna come to my terminal and this is where we're just
+
+gonna go through that checklist that we went through before to make sure that we have any time we make
+
+a change to our code.
+
+I really recommend just following this.
+
+So I'm gonna do my Pip freeze first.
+
+OK then I'm going to do a get add period.
+
+Then they get commit dash em and say new domain exclamation point.
+
+Oh I forgot.
+
+I'll do a control see here if we do an exclamation point.
+
+I've got to do a space afterwards.
+
+OK now that I have that in place I'm going to do a get push origin so that pushes it up to get hub that
+
+all looks good.
+
+OK.
+
+Next we're going to come over to this console here.
+
+Now that we're here again make sure that you move on to the virtual environment into the project directory
+
+we're already there though.
+
+Let's go ahead and do a get pull origin get our new code that we had and look that brings it down here.
+
+So I'm going to do the pip install requirements dot t t.
+
+Everything's already in place so we don't need that.
+
+Then I'm going to do a migrate.
+
+There is no changes.
+
+I'm going to do a collect static say yes to this again.
+
+Nothing needs to be changed there.
+
+And so then with this in place I'm going to go ahead and reload the web app.
+
+OK.
+
+So now we've got those pieces in place one last thing that I want to show you is that for example I
+
+talked about this what if someone puts a Nick Walter dot info we want it to essentially forward to WW
+
+w dot Nick Walter the dot info.
+
+I wish that a python anywhere would allow you to just have Nick Walter dot info or whatever your domain
+
+is.
+
+But they require that you have that W WW.
+
+So with this being the case we can make it so that when someone goes to Nick Walter Dudley info you
+
+will quickly forward them to w w w.
+
+So I found this little Web site that shows how to do it for Google domains.
+
+If you have a different provider like if you use name cheap or you use go Daddy you're gonna have to
+
+look up how to do that.
+
+But basically you come up a little bit here to synthetic record you change this to permanent redirect
+
+and forward path and we're going to leave.
+
+I'll put an ad inside of here and then we're gonna make this go to w w w dot Nick.
+
+Walter dot info and we'll go ahead and add that.
+
+Oh I forgot to do the enable SSL on that.
+
+OK so let's try that permanent redirect forward path I'm gonna do w w w no the at here then move that
+
+to w w w dot.
+
+Nick Walter dot info.
+
+Enable SSL add this.
+
+Now something interesting that I want to show you is that in fact I just went and tested on my phone
+
+my Web site.
+
+It's already been like 30 minutes but it's actually live in all this DNS stuff has been figured out.
+
+But you'll notice on my computer if I try and go to like Nick Walter dot info it's not going to load
+
+it for me.
+
+And the reason is is because on my computer it's associated like Nick Walter got info with not having
+
+anything yet.
+
+And so anyways it's something to do with caching and DNS it's above my head but I want my cell phone
+
+and look it's it's working it's it's live on Nick Walter dot info.
+
+And in fact if you go to for example I really like this Web site if you search ping dumb speed test
+
+ping Dem speed test they essentially help you find things about your Web site that you can prove but
+
+one of the cool things is if I put it here like Nick Walter got info and I say start the test they don't
+
+actually show you a little screenshot of what your Web site looks like like a little icon and this will
+
+really prove if it's sort of working because this is from a completely separate computer takes them
+
+a little bit of time there.
+
+But look at that you can see there's my Web site showing up Nick Walter is commander in chief and look
+
+even there's that new emoji smile and they've got all sorts of recommendations about how we can make
+
+this page go even faster but this is a way to prove that it's working.
+
+So on your own computer you're saying you know how can I do this you could go through your computer
+
+and I think the term is flushing your DNS but again I'm way over my head here.
+
+But if you just give it 24 48 hours your Web site will start working on your own computer.
+
+And if you need to check on like a phone or friend's computer and you should be able to see your Web
+
+site live after a while anyways congratulations you now know how to share your work with the world.
+
+Let's go ahead and make one more Web site.
